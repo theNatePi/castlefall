@@ -24,8 +24,8 @@ function Home() {
 				<div style={{border: "0.5px, var(--primary), solid"}} />
 				
 				<h1>Let's Start!</h1>
-				<LargeButton buttonText="Open Room" />
-				<LargeButton buttonText="Join Room" />
+				<LargeButton buttonText="Open Room" buttonLink="/create"/>
+				<LargeButton buttonText="Join Room" buttonLink="/join" />
 			</div>
 		</div>
 	);

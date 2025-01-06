@@ -8,6 +8,7 @@ import {
 import "./App.css";
 import Home from "./pages/home.jsx";
 import Rules from "./pages/rules.jsx";
+import CreateRoom from "./pages/create.jsx";
 
 const App = () => {
 	return (
@@ -17,6 +18,7 @@ const App = () => {
 					<Route path="/" element={<Navigate to="/home" />} />
 					<Route path="/home" element={<Home />} />
 					<Route path="/rules" element={<Rules />} />
+					<Route path="/create" element={<CreateRoom />} />
 				</Routes>
 			</Router>
 			<p style={{marginTop: "auto", fontStyle: "italic", alignSelf: "center", fontSize: "12px", paddingTop: "30px"}}>2025 <a href="https://github.com/theNatePi/castlefall">theNatePi</a> | Client Version: 0.1.0 | Server Version: 0.1.0</p>

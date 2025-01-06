@@ -1,6 +1,8 @@
 import { useNavigate} from "react-router-dom";
 
-function LargeButton({ buttonText } ) {
+function LargeButton({ buttonText, buttonLink } ) {
+	let navigate = useNavigate();
+	
 	return (
 		<button style={{
 			height: "50px",
@@ -14,7 +16,9 @@ function LargeButton({ buttonText } ) {
 			color: "white",
 			fontWeight: 700,
 			margin: "10px",
-		}}>
+		}}
+		onClick={() => navigate(buttonLink)}
+		>
 			{buttonText}
 		</button>
 	)
