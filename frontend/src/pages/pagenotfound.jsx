@@ -1,4 +1,5 @@
 import { BackButon } from "../components/buttons";
+import { HomeCard } from "../components/cards";
 
 function NotFound() {
 	return (
@@ -19,6 +20,10 @@ function NotFound() {
 				<h3 style={{fontSize: "2em", marginTop: "-1.5em"}}>Page Not Found</h3>
 				<BackButon />
 				<div style={{border: "0.5px, var(--primary), solid", margin: "30px 0 20px 0"}} />
+				<div style={{display: "flex", alignItems: "center", flexDirection: "column"}}>
+					<p>Help fix this:</p>
+					<HomeCard cardText="" cardImg="https://pngimg.com/uploads/github/github_PNG80.png" cardLink="https://github.com/theNatePi/castlefall" />
+				</div>
 			</div>
 		</div>
 	);
