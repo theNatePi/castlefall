@@ -1,0 +1,57 @@
+:root {
+	--primary: #f4ebd0;
+	--secondary: #d6ad60;
+	--tertiary: #b68d40;
+	--background: #122620;
+	
+	line-height: 1;
+	background-color: var(--background)
+}
+
+:root h1 {
+	font-family: "Tahoma", sans-serif;
+	font-weight: 700;
+	color: var(--primary);
+}
+
+:root h2 {
+	font-family: "Tahoma", sans-serif;
+	font-weight: 600;
+	color: var(--secondary);
+}
+
+:root h3 {
+	font-family: "Times New Roman", serif;
+	font-weight: 600;
+	color: var(--secondary);
+}
+
+:root p {
+	font-family: "Times New Roman", serif;
+	font-weight: 500;
+	font-size: 1.1em;
+	color: var(--tertiary);
+}
+
+.title {
+	font-family: "Romanesco", serif !important;
+	fallback font-family: "Tahoma", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 3em;
+	letter-spacing: 0.1em;
+}
+
+.app {
+	justify-self: center;
+	
+	@media (max-width: 768px) {
+		/* Mobile */
+		width: 350px;
+	}
+	
+	@media (min-width: 768px) {
+		/* Desktop */
+		width: 700px;
+	}
+}
