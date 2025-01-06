@@ -1,7 +1,7 @@
 import { LargeButton } from "../components/buttons";
 import { HomeCard } from "../components/cards";
 
-function home() {
+function Home() {
 	return (
 		<div>
 			<div style={{
@@ -31,4 +31,4 @@ function home() {
 	);
 }
 
-export default home;
+export default Home;
