@@ -13,7 +13,7 @@ function LargeButton({ buttonText, buttonLink } ) {
 			fontSize: "25px",
 			fontFamily: "Times New Roman, serif",
 			letterSpacing: "5px",
-			color: "white",
+			color: "var(--primary)",
 			fontWeight: 700,
 			margin: "10px",
 		}}
@@ -37,7 +37,7 @@ function BackButon() {
 			fontSize: "25px",
 			fontFamily: "Times New Roman, serif",
 			letterSpacing: "5px",
-			color: "white",
+			color: "var(--primary)",
 			fontWeight: 700,
 			margin: "10px",
 		}}
