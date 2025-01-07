@@ -1,5 +1,9 @@
 import { LargeButton } from "../components/buttons";
 import { HomeCard } from "../components/cards";
+import webSvg from '../assets/web.svg';
+import bookSvg from '../assets/book.svg';
+import prSvg from '../assets/pr.svg';
+
 
 function Home() {
 	return (
@@ -16,9 +20,9 @@ function Home() {
 				<div style={{border: "0.5px, var(--primary), solid"}} />
 				
 				<div style={{ display: "flex", flexDirection: "row", justifyContent: "space-evenly", margin: "30px 0 30px 0" }}>
-					<HomeCard cardText="Original Game" cardImg="https://www.pngall.com/wp-content/uploads/4/World-Wide-Web-PNG-Images.png" cardLink="https://www.bpchen.com/castlefall/#lobby" />
-					<HomeCard cardText="Full Rules" cardImg="https://webstockreview.net/images/dictionary-clipart-book-index-11.png" cardLink="/rules" />
-					<HomeCard cardText="PRs Welcome" cardImg="https://pngimg.com/uploads/github/github_PNG80.png" cardLink="https://github.com/theNatePi/castlefall" />
+					<HomeCard cardText="Original Game" cardImg={webSvg} cardLink="https://www.bpchen.com/castlefall/#lobby" />
+					<HomeCard cardText="Full Rules" cardImg={bookSvg} cardLink="/rules" />
+					<HomeCard cardText="PRs Welcome" cardImg={prSvg} cardLink="https://github.com/theNatePi/castlefall" />
 				</div>
 				
 				<div style={{border: "0.5px, var(--primary), solid"}} />
