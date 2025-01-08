@@ -1,11 +1,19 @@
 import { useNavigate} from "react-router-dom";
 
-function LargeButton({ buttonText, buttonLink, active=true } ) {
+function LargeButton({ buttonText, buttonLink=undefined, buttonFunction=undefined, active=true } ) {
 	let navigate = useNavigate();
+	
+	if (!buttonLink && !buttonFunction) {
+		throw new Error("LargeButton must have a buttonLink or buttonFunction prop");
+	}
 	
 	function handleClick() {
 		if (active) {
-			navigate(buttonLink);
+			if (buttonLink) {
+				navigate(buttonLink);
+			} else {
+				buttonFunction();
+			}
 		}
 	}
 	

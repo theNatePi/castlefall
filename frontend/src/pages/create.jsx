@@ -1,10 +1,53 @@
 import { useState } from "react";
+import { Filter } from 'bad-words'
 import { LargeButton, BackButon } from "../components/buttons";
 import { Input } from "../components/inputs";
+import { useNavigate } from "react-router";
+
+class CustomFilter extends Filter {
+	constructor() {
+		super();
+		this.badWords = this.list;
+	}
+
+	clean(text) {
+		if (!text) {
+			return "";
+		}
+		
+		let cleanedText = text;
+		
+		// Check each bad word
+		this.badWords.forEach(badWord => {
+			// Create a case-insensitive regular expression that matches the bad word anywhere
+			try {
+				const regex = new RegExp(badWord, 'gi');
+				
+				// Replace the bad word with empty string
+				cleanedText = cleanedText.replace(regex, '');
+			} catch (_) {
+				null;
+			}
+		});
+		return cleanedText;
+	}
+}
 
 function CreateRoom() {
-	const [roomName, setRoomName] = useState(null);
-	const [password, setPassword] = useState(null);
+	const [roomName, setRoomName] = useState('');
+	const [password, setPassword] = useState('');
+	const [roomAvailable, setRoomAvailable] = useState(true);
+	let navigate = useNavigate();
+	const filter = new CustomFilter();
+	
+	function onStartClick() {
+		const cleanedRoomName = filter.clean(roomName);
+		if (cleanedRoomName != roomName) {
+			setRoomAvailable(false);
+		} else {
+			navigate(`/room/${roomName}`);
+		}
+	}
 	
 	return (
 		<div className="page-with-bottom">
@@ -25,9 +68,13 @@ function CreateRoom() {
 					
 					<Input placeholder="Room Name" value={roomName} setValue={setRoomName}/>
 					<Input placeholder="Password" value={password} setValue={setPassword} password={true} />
-					<p style={{
+					<div style={{
 						textAlign: "left",	
-						// margin: "30px 0 20px 20px",
+						fontFamily: "Times New Roman, serif",
+						fontWeight: "500",
+						fontSize: "1.1em",
+						color: "var(--tertiary)",
+						margin: "20px 0 20px 0",
 					}}>
 						Note:<br /><br />
 						<ul
@@ -41,9 +88,9 @@ function CreateRoom() {
 							<li>Room names must be unique</li>
 							<li>Room names are case-insensitive</li>
 						</ul>
-					</p>
-					
-					<LargeButton buttonText="Start" buttonLink="/room" active={roomName ? true : false} />
+					</div>
+					{!roomAvailable ? <p style={{color: "red"}}>Room name not available</p> : null}
+					<LargeButton buttonText="Start" buttonFunction={onStartClick} active={roomName ? true : false} />
 				</div>
 			</div>
 			<BackButon />
