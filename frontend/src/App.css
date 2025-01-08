@@ -1,3 +1,17 @@
+body, html {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--background);
+}
+
 :root {
 	--primary: #f4ebd0;
 	--secondary: #d6ad60;
@@ -43,8 +57,6 @@
 }
 
 .app {
-	justify-self: center;
-	
 	@media (max-width: 768px) {
 		/* Mobile */
 		width: 350px;
