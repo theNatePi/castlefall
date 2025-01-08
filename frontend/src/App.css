@@ -67,3 +67,21 @@ body {
 		width: 700px;
 	}
 }
+
+.router-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  min-height: 100%;
+}
+
+.page-with-bottom {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	flex-grow: 1;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}

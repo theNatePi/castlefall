@@ -15,7 +15,8 @@ function LargeButton({ buttonText, buttonLink } ) {
 			letterSpacing: "3px",
 			color: "var(--primary)",
 			fontWeight: 700,
-			margin: "10px",
+			marginTop: "10px",
+			marginBottom: "10px",
 		}}
 		onClick={() => navigate(buttonLink)}
 		>

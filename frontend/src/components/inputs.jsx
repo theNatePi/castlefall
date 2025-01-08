@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import "./styles/inputs.css";
 
-function Input({placeholder, password = false, maxLen = 20 }) {
-	const [inputValue, setInputValue] = useState(null);
+function Input({placeholder, setValue, value = null, password = false, maxLen = 20 }) {
 	const [showPassword, setShowPassword] = useState(false);
 	
 	function passwordButton() {
-		if (inputValue) {
+		if (value) {
 			setShowPassword(!showPassword);
 		}
 	}
@@ -14,17 +13,17 @@ function Input({placeholder, password = false, maxLen = 20 }) {
 	function validateInput(val) {
     if (val.length <= maxLen) {
         const validatedVal = val.replace(/[^a-zA-Z0-9]/g, '');
-        setInputValue(validatedVal.length > 0 ? validatedVal : "");
+        setValue(validatedVal.length > 0 ? validatedVal : "");
     }
 	}
 	
 	return (
-		<div style={{width: "300px", margin: "10px"}}>
-			{inputValue ? <h3 className='above-p'>{placeholder}</h3> : null}
-			<div style={{display: "flex", flexDirection: "row"}}>
+		<div style={{width: "100%"}}>
+			{value ? <h3 className='above-p'>{placeholder}</h3> : null}
+			<div style={{display: "flex", flexDirection: "row", width: "100%"}}>
 				<input 
 					type={(password && !showPassword) ? "password" : "text"}
-					value={inputValue}
+					value={value}
 					placeholder={placeholder}
 					className={password ? "password-input" : "input"}
 					onChange={(e) => validateInput(e.target.value)}
@@ -32,7 +31,7 @@ function Input({placeholder, password = false, maxLen = 20 }) {
 				{password ? 
 					<button 
 						onClick={() => passwordButton()}
-						className={inputValue ? "password-button" : "password-button-inactive"}
+						className={value ? "password-button" : "password-button-inactive"}
 					>
 						{showPassword ? "Hide" : "Show"}
 					</button>

@@ -4,9 +4,10 @@ import prSvg from '../assets/pr.svg';
 
 function NotFound() {
 	return (
-		<div>
+		<div className="page-with-bottom">	
 			<div style={{
 				textAlign: "center",
+				width: "100%"
 			}}>
 				<div style={{display: "flex", flexDirection: "row", justifyContent: "center"}}>
 					<h1 className="title" style={{textAlign: "right"}}>Castlef</h1>
@@ -19,13 +20,13 @@ function NotFound() {
 				<div style={{border: "0.5px var(--primary) solid", margin: "30px 0 20px 0"}} />
 				<h3 style={{fontSize: "5em", marginTop: "0em"}}>404</h3>
 				<h3 style={{fontSize: "2em", marginTop: "-1.5em"}}>Page Not Found</h3>
-				<BackButon />
 				<div style={{border: "0.5px var(--primary) solid", margin: "30px 0 20px 0"}} />
 				<div style={{display: "flex", alignItems: "center", flexDirection: "column"}}>
 					<p>Did a bug get you here?</p>
 					<HomeCard cardText="" cardImg={prSvg} cardLink="https://github.com/theNatePi/castlefall" />
 				</div>
 			</div>
+			<BackButon />
 		</div>
 	);
 }
