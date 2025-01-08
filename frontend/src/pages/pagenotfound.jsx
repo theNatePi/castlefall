@@ -16,11 +16,11 @@ function NotFound() {
 					<h1 style={{alignSelf: "center", fontFamily: "IBM Plex Mono, Courier New, monospace", fontSize: "3em", padding: "44px 0 0 0"}}>2</h1>
 					<h1 style={{alignSelf: "center", fontFamily: "IBM Plex Mono, Courier New, monospace", fontSize: "3em", padding: "90px 0 0 0"}}>5</h1>
 				</div>
-				<div style={{border: "0.5px, var(--primary), solid", margin: "30px 0 20px 0"}} />
+				<div style={{border: "0.5px var(--primary) solid", margin: "30px 0 20px 0"}} />
 				<h3 style={{fontSize: "5em", marginTop: "0em"}}>404</h3>
 				<h3 style={{fontSize: "2em", marginTop: "-1.5em"}}>Page Not Found</h3>
 				<BackButon />
-				<div style={{border: "0.5px, var(--primary), solid", margin: "30px 0 20px 0"}} />
+				<div style={{border: "0.5px var(--primary) solid", margin: "30px 0 20px 0"}} />
 				<div style={{display: "flex", alignItems: "center", flexDirection: "column"}}>
 					<p>Did a bug get you here?</p>
 					<HomeCard cardText="" cardImg={prSvg} cardLink="https://github.com/theNatePi/castlefall" />

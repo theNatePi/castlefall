@@ -20,7 +20,7 @@ function Rules() {
 				blah blah filler ... blah blah filler ... blah blah filler ... blah blah filler ... 
 				blah blah filler ... blah blah filler ... blah blah
 			</h3>
-			<div style={{border: "0.5px, var(--primary), solid", margin: "30px 0 20px 0"}} />
+			<div style={{border: "0.5px var(--primary) solid", margin: "30px 0 20px 0"}} />
 			
 			<div style={{width: "100%", justifyContent: "center", display: "flex"}}>
 				<BackButon />

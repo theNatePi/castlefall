@@ -17,7 +17,7 @@ function Home() {
 				</div>
 				<h3>Welcome! filler ... blah blah filler ... blah blah filler ... blah blah filler ... blah blah filler ... blah blah filler ... blah blah filler ... blah blah filler ... blah blah filler ... blah blah filler ... blah blah</h3>
 				
-				<div style={{border: "0.5px, var(--primary), solid"}} />
+				<div style={{border: "0.5px var(--primary) solid"}} />
 				
 				<div style={{ display: "flex", flexDirection: "row", justifyContent: "space-evenly", margin: "30px 0 30px 0" }}>
 					<HomeCard cardText="Original Game" cardImg={webSvg} cardLink="https://www.bpchen.com/castlefall/#lobby" />
@@ -25,7 +25,7 @@ function Home() {
 					<HomeCard cardText="PRs Welcome" cardImg={prSvg} cardLink="https://github.com/theNatePi/castlefall" />
 				</div>
 				
-				<div style={{border: "0.5px, var(--primary), solid"}} />
+				<div style={{border: "0.5px var(--primary) solid"}} />
 				
 				<h1>Let's Start!</h1>
 				<LargeButton buttonText="Open Room" buttonLink="/create"/>
