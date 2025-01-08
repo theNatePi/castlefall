@@ -1,4 +1,4 @@
-import { BackButon } from "../components/buttons";
+import { LargeButton, BackButon } from "../components/buttons";
 import { Input } from "../components/inputs";
 
 function CreateRoom() {
@@ -38,6 +38,7 @@ function CreateRoom() {
 					</ul>
 				</p>
 				
+				<LargeButton buttonText="Start" buttonLink="/room" />
 				<BackButon />
 			</div>
 		</div>
