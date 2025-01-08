@@ -1,7 +1,13 @@
 import { useNavigate} from "react-router-dom";
 
-function LargeButton({ buttonText, buttonLink } ) {
+function LargeButton({ buttonText, buttonLink, active=true } ) {
 	let navigate = useNavigate();
+	
+	function handleClick() {
+		if (active) {
+			navigate(buttonLink);
+		}
+	}
 	
 	return (
 		<button style={{
@@ -13,12 +19,12 @@ function LargeButton({ buttonText, buttonLink } ) {
 			fontSize: "25px",
 			fontFamily: "Times New Roman, serif",
 			letterSpacing: "3px",
-			color: "var(--primary)",
+			color: active ? "var(--primary)" : "grey",
 			fontWeight: 700,
 			marginTop: "10px",
 			marginBottom: "10px",
 		}}
-		onClick={() => navigate(buttonLink)}
+		onClick={() => handleClick()}
 		>
 			{buttonText}
 		</button>

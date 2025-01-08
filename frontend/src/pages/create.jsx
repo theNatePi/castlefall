@@ -43,7 +43,7 @@ function CreateRoom() {
 						</ul>
 					</p>
 					
-					<LargeButton buttonText="Start" buttonLink="/room" />
+					<LargeButton buttonText="Start" buttonLink="/room" active={roomName ? true : false} />
 				</div>
 			</div>
 			<BackButon />
