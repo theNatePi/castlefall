@@ -1,5 +1,6 @@
 import { BackButon } from "../components/buttons";
 import { HomeCard } from "../components/cards";
+import prSvg from '../assets/pr.svg';
 
 function NotFound() {
 	return (
@@ -22,7 +23,7 @@ function NotFound() {
 				<div style={{border: "0.5px, var(--primary), solid", margin: "30px 0 20px 0"}} />
 				<div style={{display: "flex", alignItems: "center", flexDirection: "column"}}>
 					<p>Did a bug get you here?</p>
-					<HomeCard cardText="" cardImg="https://pngimg.com/uploads/github/github_PNG80.png" cardLink="https://github.com/theNatePi/castlefall" />
+					<HomeCard cardText="" cardImg={prSvg} cardLink="https://github.com/theNatePi/castlefall" />
 				</div>
 			</div>
 		</div>
