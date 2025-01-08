@@ -19,7 +19,7 @@ function Input({placeholder, password = false, maxLen = 20 }) {
 	}
 	
 	return (
-		<div style={{width: "300px"}}>
+		<div style={{width: "300px", margin: "10px"}}>
 			{inputValue ? <h3 className='above-p'>{placeholder}</h3> : null}
 			<div style={{display: "flex", flexDirection: "row"}}>
 				<input 

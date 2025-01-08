@@ -1,6 +1,6 @@
 .input {
 	height: 10px;
-	width: 280px;
+	min-width: 300px;
 	background: var(--tertiary);
 	border: var(--primary) 2px solid;
 	border-radius: 5px;
@@ -14,7 +14,7 @@
 
 .password-input {
 	height: 10px;
-	width: 280px;
+	min-width: 250px;
 	background: var(--tertiary);
 	border-top: var(--primary) 2px solid;
 	border-bottom: var(--primary) 2px solid;
@@ -53,6 +53,7 @@
 	font-weight: 600;
 	color: var(--secondary);
 	justify-self: left;
+	text-align: left;
 	margin: 20px 0 -15px 0;
 }
 

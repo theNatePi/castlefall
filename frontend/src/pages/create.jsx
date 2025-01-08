@@ -5,10 +5,13 @@ function CreateRoom() {
 	
 	
 	return (
-		<div>
+		<div style={{
+			display: "flex",
+			flexDirection: "column",
+			justifyItems: "center",
+		}}>
 			<div style={{
 				textAlign: "center",
-				justifyItems: "center",
 			}}>
 				<div style={{display: "flex", flexDirection: "row", justifyContent: "center"}}>
 					<h1 className="title" style={{textAlign: "right"}}>Castlefall</h1>
@@ -19,7 +22,7 @@ function CreateRoom() {
 				<Input placeholder="Password" password={true} />
 				<p style={{
 					textAlign: "left",	
-					margin: "30px 0 20px 20px",
+					// margin: "30px 0 20px 20px",
 				}}>
 					Note:<br /><br />
 					<ul
